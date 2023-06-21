@@ -34,7 +34,11 @@ const RegistrationForm = () => {
       }
     } catch (error) {
       console.error('Error during registration:', error);
-      // Display error message to the user
+      if (error.response && error.response.data && error.response.data.error) {
+        setError(error.response.data.error);
+      } else {
+        setError('Registration failed');
+      }
     }
   };
 
@@ -84,6 +88,7 @@ const RegistrationForm = () => {
       value={password}
       margin="normal"
       variant="outlined"
+      type="password"
       fullWidth
       onChange={(e) => setPassword(e.target.value)}
       InputProps={{ style: { fontSize: '15px' } }}

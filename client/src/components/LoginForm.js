@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { Card, Box, Typography, TextField } from '@mui/material';
+import { Card, Box, Typography, TextField, Alert} from '@mui/material';
 import CustomButton from './CustomButton';
 
 const LoginForm = ({ handleLogin }) => {
@@ -33,6 +33,7 @@ const LoginForm = ({ handleLogin }) => {
           <Typography variant="h5" mb={1} gutterBottom sx={{ textAlign: 'center', fontWeight: 500 }}>
             Login Page
           </Typography>
+          {error && <Alert severity="error">{error}</Alert>}
           <TextField
             label="Username"
             value={username}
@@ -56,7 +57,6 @@ const LoginForm = ({ handleLogin }) => {
             InputLabelProps={{ style: { fontSize: '15px' } }}
             size="small"
           />
-          {error && <Box className="error">{error}</Box>}
           <Box sx={{ width: '100%', mt: 2, display: 'flex', justifyContent: 'center' }}>
             <CustomButton text={'Login'} handleClick={handleSubmit} />
           </Box>
