@@ -26,8 +26,7 @@ const MapContainer = () => {
   return (
     <>
     <LoadScript
-        googleMapsApiKey="AIzaSyDKz59S0RAf8MC49Kxb5bfWcI7w3fi2wjk"
-      >
+        googleMapsApiKey="AIzaSyDKz59S0RAf8MC49Kxb5bfWcI7w3fi2wjk">
     <GoogleMap
       mapContainerStyle={mapContainerStyle}
       center={center}
