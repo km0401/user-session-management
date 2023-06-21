@@ -43,3 +43,16 @@ To set up and run the project, you can follow these steps:
     ```
     $ npm start
    ```
+# Usage
+1. Open the application in your web browser.
+2. Register a new user account with your desired credentials by filling out the registration form.
+3. Log in using the registered username and password.
+4. After successful login, you will be redirected to the map page.
+5. Explore the map by clicking and dragging, zooming in/out, and clicking to mark locations.
+6. Click on the logout button to manually log out from the session.
+
+# Dummy User Credentials
+For testing purposes, you can use the following dummy user credentials:
+
+Username: John@123
+Password: 12345
